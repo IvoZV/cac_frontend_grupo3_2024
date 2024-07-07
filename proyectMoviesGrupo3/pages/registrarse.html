@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix | Registración</title>
+    <link rel="shortcut icon" href="../favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navPrincipal">
+            <a href="../index.html">
+                <img src="../assets/img/iconHome.png" width="40px" alt="Movieflix - Catalogo de Peliculas" loading="lazy" class="logo">
+                <span>Movieflix | Catálogo de Películas</span>
+            </a>
+            <ul class="listNav">
+                <!--<li><a href="../index.html#tendencias" class="linkNav">Tendencias</a></li>-->
+                <li><a href="#" class="linkNav">Registrarse</a></li>
+                <li><a href="./iniciarsesion.html" class="linkNav btnInicioSesion">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainRegistracion">
+        <div class="divRegistracion">
+            <h1>Registro</h1>
+            <form action="" method="post" class="formRegistracion" id="formRegistracion">
+                <input class="inputForm" type="text" name="txtNombre" id="txtNombre" placeholder="Nombre">
+                <div id="errortxtNombre" class="mensajeError"></div>
+                <input class="inputForm" type="text" name="txtApellido" id="txtApellido" placeholder="Apellido">
+                <div id="errortxtApellido" class="mensajeError"></div>
+                <input class="inputForm" type="text" name="txtEmail" id="txtEmail" placeholder="Email">
+                <div id="errortxtEmail" class="mensajeError"></div>
+                <input class="inputForm" type="password" name="txtContrasenia" id="txtContrasenia" placeholder="Contraseña">
+                <div id="errortxtContrasenia" class="mensajeError"></div>
+                <input class="inputForm" type="date" name="txtFecha" id="txtFecha" placeholder="Fecha de Nacimiento">
+                <div id="errortxtFecha" class="mensajeError"></div>
+                <select class="inputForm" name="txtPais" id="txtPais">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
+                <div id="errortxtPais" class="mensajeError"></div>
+                <div class="divTerminos">
+                    <input type="checkbox" name="chkTerminos" id="chkTerminos" value="1">
+                    <div id="errorchkTerminos" class="mensajeError"></div>
+                    <label for="chkTerminos">Acepto términos y condiciones</label>
+                </div>
+                <input class="btnRegistracion" type="submit" value="Registrarse">
+                <a href="" class="linkHelp">¿Necesitas ayuda?</a>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="navFooter">
+            <ul class="listaFooter">
+                <li><a href="" class="linkFooter">Términos y condiciones</a></li>
+                <li><a href="" class="linkFooter">Preguntas frecuentes</a></li>
+                <li><a href="" class="linkFooter">Ayuda</a></li>
+                <li><a href="./administrador.html" class="linkFooter linkAdminPelis">Administrador Películas</a></li>
+            </ul>
+        </nav>
+        <a href="#Main" class="flechaArriba">
+            <img src="../assets/img/flechaUp.png" width="30px" alt="Ir arriba">
+        </a>
+    </footer>
+    <script src="../js/valid_registrarse.js"></script>
+</body>
+</html>

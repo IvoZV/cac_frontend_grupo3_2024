@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix | Iniciar Sesión</title>
+    <link rel="shortcut icon" href="../favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navPrincipal">
+            <a href="../index.html">
+                <img src="../assets/img/iconHome.png" width="40px" alt="Movieflix - Catalogo de Peliculas" loading="lazy" class="logo">
+                <span>Movieflix | Catálogo de Películas</span>
+            </a>
+            <ul class="listNav">
+                <!--<li><a href="../index.html#tendencias" class="linkNav">Tendencias</a></li>-->
+                <li><a href="./registrarse.html" class="linkNav">Registrarse</a></li>
+                <li><a href="#" class="linkNav btnInicioSesion">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainIniciosesion">
+        <div class="divIniciosesion">
+            <h1>Iniciar sesión</h1>
+            <form action="" method="post" class="formIniciosesion" id="formInicioSesion">
+                <input class="txtEmail" type="text" name="mail" id="mail" placeholder="E-mail">
+                <div id="errorMail" class="mensajeError"></div>
+                <input class="txtPassword" type="password" name="password" id="password" placeholder="Contraseña">
+                <div id="errorPassword" class="mensajeError"></div>
+                <input class="btnEnvioForm" type="submit" value="Ingresar">
+                <a class="linkReg" href="./registrarse.html">Registrarse</a>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="navFooter">
+            <ul class="listaFooter">
+                <li><a href="" class="linkFooter">Términos y condiciones</a></li>
+                <li><a href="" class="linkFooter">Preguntas frecuentes</a></li>
+                <li><a href="" class="linkFooter">Ayuda</a></li>
+                <li><a href="./administrador.html" class="linkFooter linkAdminPelis">Administrador Películas</a></li>
+            </ul>
+        </nav>
+        <a href="#Main" class="flechaArriba">
+            <img src="../assets/img/flechaUp.png" width="30px" alt="Ir arriba">
+        </a>
+    </footer>
+    <script src="../js/valid_iniciosesion.js"></script>
+</body>
+</html>

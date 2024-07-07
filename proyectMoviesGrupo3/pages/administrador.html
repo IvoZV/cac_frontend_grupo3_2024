@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix | Administrador de Péliculas</title>
+    <link rel="shortcut icon" href="../favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="navPrincipal">
+            <a href="../index.html">
+                <img src="../assets/img/iconHome.png" width="40px" alt="Movieflix - Catalogo de Peliculas" loading="lazy" class="logo">
+                <span>Movieflix | Catálogo de Películas</span>
+            </a>
+            <ul class="listNav">
+                <!--<li><a href="../index.html#tendencias" class="linkNav">Tendencias</a></li>-->
+                <li><a href="./registrarse.html" class="linkNav">Registrarse</a></li>
+                <li><a href="./iniciarsesion.html" class="linkNav btnInicioSesion">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="mainAdm">
+        <section class="sectionAdmSup">
+            <h2>Administrador de Películas</h2>
+            <form action="" method="post" enctype="multipart/form-data" id="formAdmPeliculas" class="admFormPeliculas">
+                <div class="admDivOne">
+                    <div class="admDivAncho1">
+                        <label for="admTit">Título</label>
+                        <input type="text" name="admTit" id="admTit" class="admForm">
+                        <div id="tituloError" class="mensajeError"></div>
+                    </div>
+                    <div class="admDivAncho2">
+                        <label for="admFecEstreno">Fecha Estreno</label>
+                        <input type="date" name="admFecEstreno" id="admFecEstreno" class="admForm">
+                        <div id="fechaestrenoError" class="mensajeError"></div>
+                    </div>
+                    <div class="admDivAncho2">
+                        <label for="admGenero">Género</label>
+                        <input type="text" name="admGenero" id="admGenero" class="admForm">
+                        <div id="generoError" class="mensajeError"></div>
+                    </div>
+                    <div class="admDivAncho2">
+                        <label for="admDuracion">Duración</label>
+                        <input type="text" name="admDuracion" id="admDuracion" class="admForm">
+                        <div id="duracionError" class="mensajeError"></div>
+                    </div>
+                </div>
+                <div class="admDivTwo">
+                    <div class="admDivAncho1">
+                        <label for="admDirector">Director</label>
+                        <input type="text" name="admDirector" id="admDirector" class="admForm">
+                        <div id="directorError" class="mensajeError"></div>
+                    </div>
+                    <div class="admDivAncho3">
+                        <label for="admReparto">Reparto</label>
+                        <input type="text" name="admReparto" id="admReparto" class="admForm">
+                        <div id="repartoError" class="mensajeError"></div>
+                    </div>
+                </div>
+                <div class="admDivTri">
+                    <div class="admDivAncho4">
+                        <label for="admSinopsis">Sinopsis</label>
+                        <textarea name="admSinopsis" id="admSinopsis" rows="3" class="admForm"></textarea>
+                        <div id="sinopsisError" class="mensajeError"></div>
+                    </div>
+                </div>
+                <div class="admDivFour">
+                    <div class="admDivAncho5">
+                        <label for="admImagen">Imagen</label>
+                        <input type="file" name="admImagen" id="admImagen" class="admForm admFormImg" accept="image/jpg">
+                        <div id="imagenError" class="mensajeError"></div>
+                    </div>
+                </div>
+                <div class="admDivFive">
+                    <input type="submit" value="Agregar Película" id="AgregarPelicula" class="btnAdmAgregarPelicula">
+                </div>
+            </form>
+        </section>
+        <hr>
+        
+        <section class="sectionAdmInf">
+            <h2>Listado de Peliculas</h2>
+            <p>Elija una pelicula para ver sus datos y modificarlos</p>
+            <br>
+            <table class="admTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>TÍTULO</th>
+                        <th>GÉNERO</th>
+                        <th>IMAGEN</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <!-- <table id="tablaPeliculas">
+
+
+                </table> -->
+                <tbody id="tablaPeliculas">
+                    <tr>
+                        <th>1</th>
+                        <td>Aquaman 2</td>
+                        <td>Acción, Fantasía, Efectos especiales</td>
+                        <td><img src="../assets/img/tendencias/aquaman2.jpg" alt="Aquaman 2"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beekeeper</td>
+                        <td>Acción, Artes Marciales</td>
+                        <td class="tdImg"><img src="../assets/img/tendencias/beekeeper.jpg" alt="Beekeeper"></td>
+                        <td class="tdButtons">
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Wish</td>
+                        <td>Animación, Infantiles</td>
+                        <td><img src="../assets/img/tendencias/wish.jpg" alt="Wish"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Wish</td>
+                        <td>Acción, Animales Fantásticos, Fantasía</td>
+                        <td><img src="../assets/img/tendencias/godzillaykong.jpg" alt="Godzilla y Kong"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>Wish</td>
+                        <td>Suspenso, Drama, Thriller</td>
+                        <td><img src="../assets/img/tendencias/blackphone.jpeg" alt="Blackphone"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td>Wish</td>
+                        <td>Terror, Suspenso, Horror</td>
+                        <td><img src="../assets/img/tendencias/laprimeraprofecia.jpg" alt="La Prinera Profecia"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navFooter">
+            <ul class="listaFooter">
+                <li><a href="" class="linkFooter">Términos y condiciones</a></li>
+                <li><a href="" class="linkFooter">Preguntas frecuentes</a></li>
+                <li><a href="" class="linkFooter">Ayuda</a></li>
+                <li><a href="" class="linkFooter linkAdminPelis">Administrador Películas</a></li>
+            </ul>
+        </nav>
+        <a href="#mainAdm" class="flechaArriba">
+            <img src="../assets/img/flechaUp.png" width="30px" alt="Ir arriba">
+        </a>
+    </footer>
+    <script src="../js/post_pelicula.js"></script>
+    <script src="../js/get_peliculas.js"></script>
+</body>
+</html>
